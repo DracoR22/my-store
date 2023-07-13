@@ -3,7 +3,7 @@
 import { ShoppingBag } from "lucide-react"
 import Button from "./ui/Button"
 import { useEffect, useState } from "react"
-import useCartModal from "@/hooks/UseCart"
+import useCart from "@/hooks/UseCart"
 import { useRouter } from "next/navigation"
 
 const NavbarActions = () => {
@@ -15,7 +15,7 @@ useEffect(() => {
 }, [])
 
 const router = useRouter()
-const cart = useCartModal()
+const cart = useCart()
 
 if(!isMounted) {
     return null

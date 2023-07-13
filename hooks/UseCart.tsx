@@ -10,7 +10,7 @@ interface CartModalStore {
    removeAll: () => void
 }
 
-const useCartModal = create(
+const useCart = create(
     persist<CartModalStore>((set, get) => ({items: [], addItem: (data: Product) => {
         const currentItems = get().items
         const existingItem = currentItems.find((item) => item.id === data.id)
@@ -33,4 +33,4 @@ const useCartModal = create(
 })
 )
 
-export default useCartModal
+export default useCart

@@ -1,6 +1,6 @@
 'use client'
 
-import useCartModal from "@/hooks/UseCart"
+import useCart from "@/hooks/UseCart"
 import Button from "../../../../components/ui/Button"
 import Currency from "../../../../components/ui/Currency"
 import { useSearchParams } from "next/navigation"
@@ -11,8 +11,8 @@ import { toast } from "react-hot-toast"
 const Summary = () => {
 
  const searchParams = useSearchParams()
- const items = useCartModal((state) => state.items)
- const removeAll = useCartModal((state) => state.removeAll)
+ const items = useCart((state) => state.items)
+ const removeAll = useCart((state) => state.removeAll)
 
  useEffect(() => {
     if(searchParams.get("success")) {

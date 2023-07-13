@@ -2,7 +2,7 @@
 
 import Currency from "@/components/ui/Currency"
 import IconButton from "@/components/ui/IconButton"
-import useCartModal from "@/hooks/UseCart"
+import useCart from "@/hooks/UseCart"
 import { Product } from "@/types"
 import { X } from "lucide-react"
 import Image from "next/image"
@@ -13,7 +13,7 @@ interface CartItemProps {
 
 const CartItem: React.FC<CartItemProps> = ({data}) => {
 
- const cart = useCartModal()
+ const cart = useCart()
  const onRemove = () => {
     cart.removeItem(data.id)
  }

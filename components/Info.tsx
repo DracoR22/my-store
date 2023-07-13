@@ -4,7 +4,7 @@ import { Product } from "@/types"
 import Currency from "./ui/Currency"
 import Button from "./ui/Button"
 import { ShoppingCart } from "lucide-react"
-import useCartModal from "@/hooks/UseCart"
+import useCart from "@/hooks/UseCart"
 import { MouseEventHandler } from "react"
 
 interface InfoProps {
@@ -13,7 +13,7 @@ interface InfoProps {
 
 const Info: React.FC<InfoProps> = ({data}) => {
 
-  const cartModal = useCartModal()
+  const cartModal = useCart()
 
   const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
     event.stopPropagation()

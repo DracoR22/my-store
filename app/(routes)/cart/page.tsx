@@ -1,14 +1,14 @@
 'use client'
 
 import Container from "@/components/ui/Container"
-import useCartModal from "@/hooks/UseCart"
+import useCart from "@/hooks/UseCart"
 import { useEffect, useState } from "react"
 import CartItem from "./components/CartItem"
 import Summary from "@/app/(routes)/cart/components/Summary"
 
 const page = () => {
 
-const cart = useCartModal()
+const cart = useCart()
 const [isMounted, setIsMounted] = useState(false)
 
 useEffect(() => {

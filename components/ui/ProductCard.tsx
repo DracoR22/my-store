@@ -8,7 +8,7 @@ import Currency from "./Currency"
 import { useRouter } from "next/navigation"
 import { MouseEventHandler } from "react"
 import usePreviewModal from "@/hooks/UsePreviewModal"
-import useCartModal from "@/hooks/UseCart"
+import useCart from "@/hooks/UseCart"
 
 interface ProductCardProps {
     data: Product
@@ -18,7 +18,7 @@ const ProductCard: React.FC<ProductCardProps> = ({data}) => {
 
 const router = useRouter()
 const previewModal = usePreviewModal()
-const cartModal = useCartModal()
+const cartModal = useCart()
 
 const handleClick = () => {
  router.push(`/product/${data?.id}`)
