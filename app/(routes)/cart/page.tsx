@@ -6,7 +6,9 @@ import { useEffect, useState } from "react"
 import CartItem from "./components/CartItem"
 import Summary from "@/app/(routes)/cart/components/Summary"
 
-const page = () => {
+export const revalidate = 0
+
+const HomePage = () => {
 
 const cart = useCart()
 const [isMounted, setIsMounted] = useState(false)
@@ -44,4 +46,4 @@ if (!isMounted) {
   )
 }
 
-export default page
+export default HomePage
